@@ -16,8 +16,6 @@ USUARIOS_ARCH = path.join(dir_path, 'excels', 'usuarios.xlsx')
 REG_NOM_ARCH = path.join(dir_path, 'excels', 'registro_diario_nombres.xlsx')
 REG_DEUDOR_ARCH = path.join(dir_path, 'excels', 'reg_deudor.xlsx')
 
-URL_WITH_API_KEY = 'https://www.googleapis.com/blogger/v3/blogs/1252347762538283834/posts/8185578739401206597/comments?key=AIzaSyAVIUqp3wyqoLQiVYxFrJIFMzGgvvHR7XM'
-
 def generar_dict_dni_a_nombre() -> dict:
     dict = {}
     df_usuarios = pd.read_excel(USUARIOS_ARCH, dtype=str, keep_default_na=False).set_index('DNI')
